@@ -45,7 +45,7 @@ if(!isset($_SESSION['login']))
                         <img src="">C'est Fait</img>
                     </div>
                     <div>
-                        <img src="">Supprimer</img>
+                     <?php $var->delete_tdl() ?>
                     </div>
                 </article>
 
