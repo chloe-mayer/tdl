@@ -10,8 +10,10 @@
         <title> To Do List</title>
     </head>
     <body id="body-tdl">
-        <main id="main-tdl">
-        <?php
+        <header>
+            
+        </header>
+    <?php
             session_start();
             //if(!isset($_SESSION['login']))
             {
@@ -20,11 +22,10 @@
             $connexion=mysqli_connect('localhost','root','','tdl');
             $sql="SELECT list, date_creation FROM liste WHERE id_utilisateurs = 1 ORDER by id DESC ";
             $query=mysqli_query($connexion,$sql);
-            
-
-
-
         ?>
+
+        <main id="main-tdl">
+        
             <section>
                 <h1> Ma To Do List</h1> 
                 <article>
@@ -52,14 +53,8 @@
                                     while ($data = mysqli_fetch_assoc($query)) 
                                     {
                                         echo"<li>".$data['list']."".$data['date_creation']."</li>";   
-                                    }
-                                
-                                                   
+                                    }                      
 		                    ?>
-                                    
-                            
-                        
-
                         </ul>
                         
                     </div>

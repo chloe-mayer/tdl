@@ -6,7 +6,7 @@ function envoi_affichagebdd()
   			{
       			document.getElementById("affiche_tdl").innerHTML = this.responseText;
   			};
-  			httpRequest.open("GET","fonctions/affichage_tdl_ajout_bdd.php?x="+vartext);
+  			httpRequest.open("GET","fonctions/affichage_tdl_ajout_bdd.php?ajout_tdl="+vartext);
   			httpRequest.send();
 			console.log(vartext);
 		}
